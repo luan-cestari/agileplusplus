@@ -7,19 +7,8 @@ O mundo está ficando mais rápido, a concorrência e o mercado fazem aumentar a
 Devops: Cultura, Automatização (organização e sImplicidade), Mensuração, Colaboração, Motivação que resultam em otimização da infraestrutura e aceleram organizações
 Agile + ITIL (e afins)
 
-## Background
-devops principles of Culture, Automation, Measurement, and Sharing      devops hiring breaks down the silos between the candidate, the recruiter, and the hiring manger by identifying and prioritising a shared, long-term goal (employee engagement)
 
-Good video discussion about enabling infrastructure optimisation and speeding up organisations. Focuses on the benefits of simplicity and the importance of applying that to organisations as well as IT systems.
-
-Simplicity,design , Automating ,testing, quality,Infrastructure as Code (configuration management software/tools), Principle of Sharing, Open source
-
-DevOps Principles; DevOps Methods; DevOps Practices
-The intent behind The DevOps Cookbook Project is to catalog what the “high performing 
-
-DevOps organisations” all have in common, and then provide prescriptive guidance so that other organisations can replicate their results. Very much like the “Visible Ops Handbook,” we are attempting to describe all the necessary and sufficient steps to create the culture, values, processes, procedures, and daily work behind their transformations.We describe what is required from each of the major stakeholders, including Development, Test, Product Management, as well as IT Operations.
-
-DevOps has been a hot topic for several years, but it’s nearly always talked about with respect to web operations and startups. Since DevOps starts culturally, you can take a bottom-up approach and create a DevOps mindset inside your organisation, even if you’re not deploying code twenty times a day.
+Apresentação: http://luan-cestari.github.io/agileplusplus/index.html#/
 
 
 ##Links
