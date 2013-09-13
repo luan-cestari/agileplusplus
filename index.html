@@ -1,79 +1,285 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Agileplusplus : O mundo está ficando mais rápido, a concorrência e o mercado fazem aumentar ainda mais a pressão sobre o setor de TI que, por muito tempo segregado em diversas áreas, está agora se juntando e colaborando mais e mais. Isso consiste numa relação estrita com DevOps. Venha nessa palestra descobrir um pouco mais dessa cultura (alguns princípios, métodos e práticas), conceitos base (exemplo Worse is better) e como a colaboração está fazendo empresas realizarem mais de 35 deploys em produção por dia." />
+	<head>
+		<meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <title>AgileVale 2013 - Agile++ =&gt; DevOps, Communication, Cloud, Continuous Deployments and MOAR</title>
 
-    <title>Agileplusplus</title>
-  </head>
+		<meta name="description" content="O mundo está ficando mais rápido, a concorrência e o mercado fazem aumentar ainda mais a pressão sobre o setor de TI que, por muito tempo segregado em diversas áreas, está agora se juntando e colaborando mais e mais. Isso consiste numa relação estrita com DevOps. Venha nessa palestra descobrir um pouco mais dessa cultura (alguns princípios, métodos e práticas), conceitos base (exemplo Worse is better) e como a colaboração está fazendo empresas realizarem mais de 35 deploys em produção por dia.">
+		<meta name="author" content="Luan Cestari">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="stylesheets/reveal.min.css">
+		<link rel="stylesheet" href="stylesheets/theme/default.css" id="theme">
+		<link rel="stylesheet" href="stylesheets/zenburn.css">
 
-  <body>
+		<script>
+			document.write( '<link rel="stylesheet" href="stylesheets/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/luan-cestari/agileplusplus">View on GitHub</a>
+		<!--[if lt IE 9]>
+		<script src="javascripts/html5shiv.js"></script>
+		<![endif]-->
 
-          <h1 id="project_title">Agileplusplus</h1>
-          <h2 id="project_tagline">O mundo está ficando mais rápido, a concorrência e o mercado fazem aumentar ainda mais a pressão sobre o setor de TI que, por muito tempo segregado em diversas áreas, está agora se juntando e colaborando mais e mais. Isso consiste numa relação estrita com DevOps. Venha nessa palestra descobrir um pouco mais dessa cultura (alguns princípios, métodos e práticas), conceitos base (exemplo Worse is better) e como a colaboração está fazendo empresas realizarem mais de 35 deploys em produção por dia.</h2>
+	</head>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/luan-cestari/agileplusplus/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/luan-cestari/agileplusplus/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Agile++ =&gt; DevOps, ...  and MOAR</h1>
+						<h3>AGILEVALE 2013</h3>
+						<p>
+            <small>Created by <a href="http://superseniordevelopers.blogspot.com" target="_blank">Luan Cestari</a> / <a href="https://plus.google.com/108300913932349459095/about" target="_blank">G+</a>/ <a href="http://www.facebook.com/luan.cestari" target="_blank">Facebook</a>/ <a href="http://twitter.com/@BR_LuanCestari" target="_blank"> @BR_LuanCestari</a>/ <a href="http://www.ourdailycodes.com" target="_blank">Blog</a></small>
+						</p>
+					</section>
+					<section data-background="images/400.jpg">
+						<h2>We are about to begin :)</h2>
+					</section>
+					<section data-background="black">
+						<h2>Before we begin...</h2>
+						<ul>
+							<li>Special effects: teclas <b>'ESC'</b> ou  <b>'s'</b></li>
+							<li>Imprimir: só colocar <b>"print-pdf"</b> no final da url:<ul><li>".../agileplusplus/?print-pdf#/"</li></ul></li>
+						</ul>
+						<aside class="notes">
+							Agradeço a presença de todos presentes e online
+							Qualquer dúvida, só mandar um tweet ou comment no Face que eu respondo =)
+						</aside>
+					</section>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+					<section data-background="purple" data-state="changeme">
+						<img id="rotateId" src="images/arrow.png" style="border:none;width:40%;height:auto;" alt="image of a down arrow">
+					</section>
+					<section data-background="white">
+						<img src="images/redhat.png" style="border:none;box-shadow:none;">
+					</section>
+					<section>
+						<h2>Agenda</h2>
+						<ul>
+							<li>Intro</li>
+							<li>Pouco de Agile</li>
+							<li>O que há de novo? DevOps</li>
+							<li>Outras coisas</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Pontos-chave</h2>
+						<ul>
+							<li>Comunicação</li>
+							<li>Produtivide</li>
+							<li>No Silverbullet</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Devido ao tempo, vai ser meio rápida e overview, mas vale a pena ir mais a fundo via links deixados github!</h2>
+					</section>
+				</section>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+				<section>
+					<section>
+						<h2>Pouco de Agile</h2>
+					</section>
+					<section>
+						<h2>Manifesto</h2>
+						<ul>
+							<li>Indivíduos e interações mais que processos e ferramentas</li>
+							<li>Software em funcionamento mais que documentação abrangente</li>
+							<li>Colaboração com o cliente mais que negociação de contratos</li>
+							<li>Responder a mudanças mais que seguir um plano</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Manifesto meio simplificado</h2>
+						<ul>
+							<li>Endender o ser humano faz toda a diferença</li>
+							<li>Software funcionando</li>
+							<li>Cliente parceiro</li>
+							<li>Comunicação rápida de mudança</li>
+							<li class="fragment roll-in">Não exatamente tudo isso e/ou só isso</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Manifesto em uma frase</h2>
+						<ul>
+							<li>Agile é uma abordagem para desenvolvimento de software que enfatiza o trabalho em equipe, entregas frequentes de software funcionando, colaboração do cliente, ea capacidade de responder rapidamente as mudanças.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>O que há de novo? DevOps!?!</h2>
+					</section>
+					<section>
+						<h2>Warning: There is no Silverbullet</h2>
+					</section>
+					<section>
+						<h2>Empresa Tradicional</h2>
+						<ul>
+							<li>Desenvolvedores(Devs) fazem funcionalidades</li>
+							<li>Administradores(Ops) deixam tudo estável e rápido</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Outro jeito de encarrar</h2>
+						<ul>
+							<li class="fragment roll-in">Devs ajudam o negócio da empresa se manter e crescer</li>
+							<li class="fragment roll-in">Ops também!</li>
+							<li class="fragment roll-in">Pois a empresa precisa de mudanças</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Ou seja: Mudança de cultura!</h2>
+					</section>
+					<section>
+						<h2>Mudança de cultura</h2>
+						<ul>
+							<li>Não são:</li>
+							<ul>
+								<li class="fragment roll-in">Fáceis</li>
+								<li class="fragment roll-in">Simples</li>
+								<li class="fragment roll-in">Visíveis</li>
+							</ul>
+							<li class="fragment roll-in">Veja mais no The Game Of Team Culture nos links =)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Qual é o objetivo do Devops</h2>
+						<p class="fragment roll-in">Baixar os riscos de mudanças usando mais ferramentas e automatizações</p>
+					</section>
+					<section>
+						<h2>O que muda:</h2>
+						<ul>
+							<li class="fragment roll-in">Mudanças sendo feitas mais rápidas e com qualidade!</li>
+							<li class="fragment roll-in">O Flickr usando essa nova cultura em 2009 fazia +10 deploys em produção por dia!</li>
+							<li class="fragment roll-in">A Etsy +35</li>
+							<li class="fragment roll-in">A IMVU +50 por dia na média</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Como eles chegaram até esse número:</h2>
+						<ul>
+							<li class="fragment roll-in">Com Testes (de Integração)</li>
+							<li class="fragment roll-in">Continous Integration (CI)</li>
+							<li class="fragment roll-in">Continous Deployment</li>
+							<li class="fragment roll-in">Continous Delivery</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Outras coisas</h2>
+					</section>
+					<section>
+						<h2>Cultura do Facebook</h2>
+						<ul>
+							<li>Não existe um planejamento detalhado</li>
+							<li>Projetos sem branch</li>
+							<li>Sem time de QA</li>
+							<li>Código direto na produção 2x por dia</li>
+							<li>Engenheiro escolhe no que vai trabalhar</li>
+							<li>Sem atribuição de culpa</li>
+							<li>Hackaton</li>
+						</ul>
+					</section>
+					<section>
+						<h2>E no google</h2>
+						<p>Palestra "Good Enough" IS Good Enough! da OSCON nos links</p>
+					</section>
+					<section>
+						<h2>Sem fim...</h2>
+						<ul>
+							<li>Educação continua</li>
+							<li>Aperfeiçoamento continuo</li>
+							<li>Mudança continua</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Palestra do Facebook Webcast</h2>
+						<p>The Best of Velocity: Move Fast and Ship Things - Facebook's Operational and Release Processes : 05AM PT, San Francisco</p> 
+						<p>http://oreillynet.com/pub/e/2890?imm_mid=0af7f7&cmp=em-na-webcast-info-webcast_20130909</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>THE END</h1>
+						<h3>BY Luan Cestari</h3>
+						<p>http://www.ourdailycodes.com/</p>
+						<p>http://superseniordevelopers.blogspot.com.br/</p>
+					</section>
+					<section>
+						<h2>Perguntas? Dúvidas? Sugestões</h2>
+					</section>
+				</section>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+			</div>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		</div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+		<script src="javascripts/head.min.js"></script>
+		<script src="javascripts/reveal.min.js"></script>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				touch: true,
+				center: true,
+				autoSlide: 10*60*1000,
+				theme: Reveal.getQueryHash().theme , // Sky Beige Simple Serif Night /css/theme
+				transition: Reveal.getQueryHash().transition , // default/cube/page/concave/zoom/linear/fade/none
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+Reveal.addEventListener( 'changeme', function() {
+  window.setInterval(function(){
+    x = document.getElementById('rotateId');
+    x.style.cssText=x.style.cssText='border:none;width:40%;height:auto;transform:rotate(240deg);-ms-transform:rotate(240deg);-webkit-transform:rotate(240deg);transition-duration: 950ms;-webkit-transition-duration: 950ms;';
+  },5000);
+}, false );
+		</script>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+		<div class="share-reveal" style="display: none; position: absolute; bottom: 10px; left: 50%; margin-left: -305px; z-index: 20;">
+			<a href="http://twitter.com/share" class="twitter-share-button" data-text="#agilevale - apresentando Agile++ - @BR_LuanCestari" data-url="http://luan-cestari.github.io/agileplusplus/?print-pdf#/" data-count="small" data-related="Luan Cestari"></a>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+			<iframe id="facebook-button" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fluan-cestari.github.io%2Fagileplusplus%2F%3Fprint-pdf%23%2F&layout=button_count&show_faces=false&width=93&action=like&font=arial&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:24px; position: relative; top: 4px;" allowTransparency="true"></iframe>
+			<a style="font-size: 150%;text-decoration: none;color: #e7ad52; font-family: 'Helvetica Neue', Arial, sans-serif; border:none; overflow:hidden; width:85px; position: relative; top: -4px;" href="http://bit.ly/">http://bit.ly/</a>
+			<a href="https://twitter.com/BR_LuanCestari" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @BR_LuanCestari</a>
+		</div>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+		<a class="fork-reveal" style="display: none;" href="https://github.com/luan-cestari/agileplusplus"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<script>
+/* <![CDATA[ */
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+  ga('create', 'UA-39948933-6', 'luan-cestari.github.io');
+  ga('send', 'pageview');
+/* ]]> */
+</script>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Agileplusplus maintained by <a href="https://github.com/luan-cestari">luan-cestari</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+		<script>
+			if( !navigator.userAgent.match( /iphone|ipod|android|ipad|blackberry/gi ) && !!document.querySelector ) {
+				document.querySelector( '.share-reveal' ).style.display = 'block';
+				document.querySelector( '.fork-reveal' ).style.display = 'block';
+			}
+		</script>
 
-    
-
-  </body>
+	</body>
 </html>
+
